@@ -5,8 +5,71 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
         <title>Sign-Up Form</title>
     </head>
-    <body></body>
+    <body>
+        <main>
+            <div class="container grid">
+                <div class="background-img">
+                    <div class="logo">
+                        <img src="img/odin-lined.png" alt="odin-logo" />
+                        <span>ODIN</span>
+                    </div>
+                    <!-- <div class="message">
+                        <p class="main-message">
+                            This is not a real online service! You know you need something like this in your life to help you realize your deepest
+                            dreams. Sign up now to get started.
+                        </p>
+                        <span>You know you want to!</span>
+                    </div> -->
+                </div>
+                <div class="form-section">
+                    <div class="form-section-top">
+                        <div class="form-logo hidden">
+                            <img src="img/odin-lined.png" alt="odin-logo" />
+                            <span>ODIN</span>
+                        </div>
+                    </div>
+                    <div class="form-section-form">
+                        <form action="#" class="form">
+                            <h3>Sign-Up Here!</h3>
+
+                            <div class="input input-firstname">
+                                <label for="firstname" class="firstname">First Name</label>
+                                <input type="text" id="firstname" placeholder="Heemo" required />
+                            </div>
+                            <div class="input input-lastname">
+                                <label for="lastname" class="lastname">Last Name</label>
+                                <input type="text" id="lastname" placeholder="Yang" required />
+                            </div>
+                            <div class="input input-email">
+                                <label for="email" class="email">Email</label>
+                                <input type="email" id="email" placeholder="Heemo@gmail.521" required />
+                            </div>
+                            <div class="input input-phone">
+                                <label for="phone-number" class="phone-number">Phone Number</label>
+                                <input type="text" id="phone-number" placeholder="Heemo@gmail.521" required />
+                            </div>
+                            <div class="input input-pwd">
+                                <label for="password" class="password">Password</label> <input type="password" id="password" required />
+                            </div>
+                            <div class="input input-confirm-pwd">
+                                <label for="confirm-password" class="confirm-password">Confirm Password</label>
+                                <input type="password" id="confirm-password" required />
+                            </div>
+
+                            <button type="submit" class="btn">Create Account</button>
+                        </form>
+                    </div>
+                    <div class="form-section-bottom">
+                        <span>Already have an account? <a href="#" class="btn">Log in</a></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>

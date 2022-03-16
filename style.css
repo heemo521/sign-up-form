@@ -11,14 +11,13 @@ SEMI-BOLD: 600
 BOLD: 700
 
 - LINE HEIGHTS
-DEFAULT: 1
-SMALL: 1.05
-MEDIUM: 1.2
-PARAGRAPH DEFAULT: 1.6
+DEFAULT: 
+SMALL: 
+MEDIUM: 
+PARAGRAPH DEFAULT: 
 
 - LETTER SPACING
--0.5px
-0.75px
+
 
 
 - FONT FAMILY
@@ -30,11 +29,11 @@ Fonts: https://fonts.google.com/
 /*
 Tint & Shades: https://maketintsandshades.com/
 Contrast: https://coolors.co/ 
-- PRIMARY: #e67e22
-- TINTS: #fdf2e9
-- SHADES: #cf711f
+- PRIMARY:  #596D48
+- TINTS: 
+- SHADES: 
 - ACCENTS:
-- GREYS:
+- GREYS:#E5E7EB
 #555; 
 #333;
 
@@ -51,7 +50,7 @@ Icons: https://heroicons.com/
 
 /* 06 BORDER-RADIUS----------------------------------------------------------*/
 /* 
-DEFAULT: 9px
+DEFAULT: 
 
 */
 /* 07 WHITESPACE------------------------------------------------------------- */
@@ -64,6 +63,7 @@ DEFAULT: 9px
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px red solid; */
 }
 
 html {
@@ -71,20 +71,29 @@ html {
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1;
     font-weight: 400;
-    color: #555;
+    background-image: url('/img/background.jpg');
+    background-size: 180vh auto;
+    color: #fff;
 }
-
+main {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 /* *************************************************************** */
 /* GENERAL REUSABLE COMPONENTS */
 /* *************************************************************** */
 
+.container {
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
 .grid {
     display: grid;
-    column-gap: 4.8rem;
-    row-gap: 9.6rem;
+    grid-template-columns: 1fr 1fr;
 }
 
 .grid--2-cols {
@@ -101,4 +110,148 @@ body {
 
 .grid--center-v {
     align-items: center;
+}
+
+/* *************************************************************** */
+/* IMG */
+/* *************************************************************** */
+
+.background-img {
+    position: relative;
+}
+
+.logo,
+.form-logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(12, 133, 153, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    font-size: 6rem;
+    font-weight: 700;
+}
+.logo img,
+.form-logo img {
+    max-height: 10rem;
+}
+
+/* .message {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48rem;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3.2rem;
+    border-radius: 10px;
+    bottom: 10%;
+    left: 10%;
+} */
+
+/* *************************************************************** */
+/* form-section */
+/* *************************************************************** */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form-section-top {
+    flex: 1;
+    position: relative;
+}
+
+.form-logo {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.form-section-form {
+    background-color: rgba(12, 133, 153, 0.5);
+    padding: 1.4rem 0;
+    border-radius: 10px;
+}
+.form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat (4, 1fr);
+    justify-items: center;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 3.2rem;
+}
+.form h3 {
+    grid-column: span 4;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+.form .input {
+    grid-column: span 2;
+}
+.input label {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-section-bottom {
+    flex: 1;
+    margin-top: 3.2rem;
+}
+
+.form-section-bottom span {
+    font-size: 1.2rem;
+}
+
+.form-section-bottom a {
+    margin-left: 1.4rem;
+}
+
+.form button {
+    grid-column: span 4;
+    font-size: 1.4rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: rgb(12, 133, 153);
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 9px;
+}
+.btn:active,
+.btn:hover {
+    background-color: #0b7285;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        opacity: 0;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 0fr 1fr;
+        /* column-gap: 4.8rem;
+        row-gap: 9.6rem; */
+    }
+
+    .form-logo {
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 1;
+    }
 }
